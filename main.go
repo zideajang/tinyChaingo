@@ -2,17 +2,34 @@ package main
 
 import (
 	"fmt"
-	"com.github.zideajang.tinychain/prompt"
+	// "tinychain/prompt"
+	"tinychain/llm"
 )
 
-func main() {
-	// Create a new prompt template for a joke about a specified content
-	promptTemplate := prompt.FromTemplate("Tell me a %s joke about %s.")
-	promptOne := promptTemplate.Format("funny", "chickens")
-	fmt.Println(promptOne)
+func main(){
 
-	// Create a simple prompt template for a generic joke
-	promptTemplate = prompt.FromTemplate("Tell me a joke")
-	promptTwo := promptTemplate.Format() // No variables needed here
-	fmt.Println(promptTwo)
+	ollama := &llm.OllamaChatModel{}
+
+	prompt := `[{"role": "user","content": "why is the sky blue?"}]`
+
+	response := ollama.Invoke(prompt)
+
+	fmt.Println("Response from Ollama Chat Model:", response)
+
+	// stringTemplate := prompt.StringPromptTemplate{
+	// 	Template: "Tell me a {adjective} joke about {content}.",
+	// }
+	
+	
+	// inputVariables := map[string]string{
+	// 	"adjective":"funny",
+	// 	"content":"chickens",
+	// }
+	
+	// promptTemplate := prompt.PromptTemplate{}
+
+	// _ = promptTemplate
+
+	// result := stringTemplate.Format(inputVariables)
+	// fmt.Println(result)
 }

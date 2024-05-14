@@ -1,3 +1,3 @@
-module com.github.zideajang.tinychain
+module tinychain
 
 go 1.21.4
