@@ -1,0 +1,26 @@
+{
+    "name":"snowball",
+    "tasks":[
+        {
+            "name":"",
+            "event":["start"]
+        },
+        {
+            "name":"",
+            "descript":"feedback"
+        },
+        {
+            "name":"",
+            "descript":"feedback"
+        }
+    ],
+    "events":[
+        {
+
+        },
+        {
+
+        }
+    ]
+
+}

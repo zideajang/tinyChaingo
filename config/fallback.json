@@ -1,0 +1,22 @@
+{
+    "name":"fallback",
+    "tasks":[
+        {
+            "name":"",
+            "event":["start"]
+        },
+        {
+            "name":"",
+            "descript":"feedback"
+        }
+    ],
+    "events":[
+        {
+
+        },
+        {
+
+        }
+    ]
+
+}

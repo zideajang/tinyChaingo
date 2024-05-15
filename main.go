@@ -1,20 +1,30 @@
 package main
 
 import (
-	"fmt"
+	//"fmt"
 	// "tinychain/prompt"
-	"tinychain/llm"
+	"tinychain/prompt"
+	//"tinychain/runnable"
+	// "tinychain/llm"
 )
 
 func main(){
 
-	ollama := &llm.OllamaChatModel{}
+	promptTemplate := &prompt.PromptTemplate{}
 
-	prompt := `[{"role": "user","content": "why is the sky blue?"}]`
+	promptTemplate.Template = "Tell me a {adjective} joke about {content}."
 
-	response := ollama.Invoke(prompt)
 
-	fmt.Println("Response from Ollama Chat Model:", response)
+	//promptTemplate
+	
+
+	// ollama := &llm.OllamaChatModel{}
+
+	// prompt := `[{"role": "user","content": "why is the sky blue?"}]`
+
+	// response := ollama.Invoke(prompt)
+
+	// fmt.Println("Response from Ollama Chat Model:", response)
 
 	// stringTemplate := prompt.StringPromptTemplate{
 	// 	Template: "Tell me a {adjective} joke about {content}.",
